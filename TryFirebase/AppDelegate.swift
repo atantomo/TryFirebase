@@ -8,6 +8,7 @@
 
 import UIKit
 import Firebase
+import AdSupport
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
