@@ -33,6 +33,7 @@
 /* Begin PBXFileReference section */
 		4935472D23D5291F001A72D7 /* FirebaseMessaging.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FirebaseMessaging.framework; path = Carthage/Build/iOS/FirebaseMessaging.framework; sourceTree = "<group>"; };
 		4935472E23D5291F001A72D7 /* Protobuf.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Protobuf.framework; path = Carthage/Build/iOS/Protobuf.framework; sourceTree = "<group>"; };
+		4935473423D52E49001A72D7 /* TryFirebase.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = TryFirebase.entitlements; sourceTree = "<group>"; };
 		4984754423D14393005CAF30 /* TryFirebase.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TryFirebase.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4984754723D14393005CAF30 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4984754923D14393005CAF30 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -102,6 +103,7 @@
 		4984754623D14393005CAF30 /* TryFirebase */ = {
 			isa = PBXGroup;
 			children = (
+				4935473423D52E49001A72D7 /* TryFirebase.entitlements */,
 				4984756623D145ED005CAF30 /* GoogleService-Info.plist */,
 				4984754723D14393005CAF30 /* AppDelegate.swift */,
 				4984754923D14393005CAF30 /* SceneDelegate.swift */,
@@ -376,8 +378,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = TryFirebase/TryFirebase.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 3U2947Q5KB;
+				DEVELOPMENT_TEAM = A89P4PALFZ;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
@@ -391,7 +394,7 @@
 					"$(OTHER_LDFLAGS)",
 					"-ObjC",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "socialgood-foundation.TryFirebase";
+				PRODUCT_BUNDLE_IDENTIFIER = "socialgood-foundation.TryFirebase-dev";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -402,8 +405,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = TryFirebase/TryFirebase.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 3U2947Q5KB;
+				DEVELOPMENT_TEAM = A89P4PALFZ;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
@@ -417,7 +421,7 @@
 					"$(OTHER_LDFLAGS)",
 					"-ObjC",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "socialgood-foundation.TryFirebase";
+				PRODUCT_BUNDLE_IDENTIFIER = "socialgood-foundation.TryFirebase-dev";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

@@ -8,7 +8,6 @@
 
 import UIKit
 import Firebase
-import AdSupport
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -18,6 +17,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         FirebaseApp.configure()
+
+        // For iOS 10 display notification (sent via APNS)
+        UNUserNotificationCenter.current().delegate = self
+        Messaging.messaging().delegate = self
+
+        let authOptions: UNAuthorizationOptions = [.alert, .badge, .sound]
+        UNUserNotificationCenter.current().requestAuthorization(
+          options: authOptions,
+          completionHandler: {_, _ in })
+
         return true
     }
 
@@ -38,3 +47,46 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 }
 
+extension AppDelegate: UNUserNotificationCenterDelegate {
+
+    func userNotificationCenter(
+      _ center: UNUserNotificationCenter,
+      didReceive response: UNNotificationResponse,
+      withCompletionHandler completionHandler: @escaping () -> Void) {
+
+      // 1
+      let userInfo = response.notification.request.content.userInfo
+
+      // 2
+  //    if let aps = userInfo["aps"] as? [String: AnyObject],
+  //      let newsItem = NewsItem.makeNewsItem(aps) {
+  //
+  //      (window?.rootViewController as? UITabBarController)?.selectedIndex = 1
+  //
+  //      // 3
+  //      if response.actionIdentifier == Identifiers.viewAction,
+  //        let url = URL(string: newsItem.link) {
+  //        let safari = SFSafariViewController(url: url)
+  //        window?.rootViewController?.present(safari, animated: true,
+  //                                            completion: nil)
+  //      }
+  //    }
+
+      // 4
+      completionHandler()
+    }
+
+}
+
+extension AppDelegate: MessagingDelegate {
+
+    func messaging(_ messaging: Messaging, didReceiveRegistrationToken fcmToken: String) {
+        print("Firebase registration token: \(fcmToken)")
+
+        let dataDict:[String: String] = ["token": fcmToken]
+        NotificationCenter.default.post(name: Notification.Name("FCMToken"), object: nil, userInfo: dataDict)
+        // TODO: If necessary send token to application server.
+        // Note: This callback is fired at each app startup and whenever a new token is generated.
+    }
+
+}
