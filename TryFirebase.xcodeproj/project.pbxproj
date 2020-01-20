@@ -11,7 +11,6 @@
 		4935473123D5291F001A72D7 /* Protobuf.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4935472E23D5291F001A72D7 /* Protobuf.framework */; };
 		4976ACCA23D14E60008188D3 /* FirebaseCoreDiagnostics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49C49DC923D14BB700CD16D6 /* FirebaseCoreDiagnostics.framework */; };
 		4984754823D14393005CAF30 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4984754723D14393005CAF30 /* AppDelegate.swift */; };
-		4984754A23D14393005CAF30 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4984754923D14393005CAF30 /* SceneDelegate.swift */; };
 		4984754C23D14393005CAF30 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4984754B23D14393005CAF30 /* ViewController.swift */; };
 		4984754F23D14393005CAF30 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4984754D23D14393005CAF30 /* Main.storyboard */; };
 		4984755123D14396005CAF30 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4984755023D14396005CAF30 /* Assets.xcassets */; };
@@ -36,7 +35,6 @@
 		4935473423D52E49001A72D7 /* TryFirebase.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = TryFirebase.entitlements; sourceTree = "<group>"; };
 		4984754423D14393005CAF30 /* TryFirebase.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TryFirebase.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4984754723D14393005CAF30 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		4984754923D14393005CAF30 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		4984754B23D14393005CAF30 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		4984754E23D14393005CAF30 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		4984755023D14396005CAF30 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -106,7 +104,6 @@
 				4935473423D52E49001A72D7 /* TryFirebase.entitlements */,
 				4984756623D145ED005CAF30 /* GoogleService-Info.plist */,
 				4984754723D14393005CAF30 /* AppDelegate.swift */,
-				4984754923D14393005CAF30 /* SceneDelegate.swift */,
 				4984754B23D14393005CAF30 /* ViewController.swift */,
 				4984754D23D14393005CAF30 /* Main.storyboard */,
 				4984755023D14396005CAF30 /* Assets.xcassets */,
@@ -234,7 +231,6 @@
 			files = (
 				4984754C23D14393005CAF30 /* ViewController.swift in Sources */,
 				4984754823D14393005CAF30 /* AppDelegate.swift in Sources */,
-				4984754A23D14393005CAF30 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -386,6 +382,7 @@
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
 				INFOPLIST_FILE = TryFirebase/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -413,6 +410,7 @@
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
 				INFOPLIST_FILE = TryFirebase/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
