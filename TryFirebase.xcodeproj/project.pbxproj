@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4935472F23D5291F001A72D7 /* FirebaseMessaging.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4935472D23D5291F001A72D7 /* FirebaseMessaging.framework */; };
+		4935473123D5291F001A72D7 /* Protobuf.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4935472E23D5291F001A72D7 /* Protobuf.framework */; };
 		4976ACCA23D14E60008188D3 /* FirebaseCoreDiagnostics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49C49DC923D14BB700CD16D6 /* FirebaseCoreDiagnostics.framework */; };
 		4984754823D14393005CAF30 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4984754723D14393005CAF30 /* AppDelegate.swift */; };
 		4984754A23D14393005CAF30 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4984754923D14393005CAF30 /* SceneDelegate.swift */; };
@@ -29,6 +31,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4935472D23D5291F001A72D7 /* FirebaseMessaging.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FirebaseMessaging.framework; path = Carthage/Build/iOS/FirebaseMessaging.framework; sourceTree = "<group>"; };
+		4935472E23D5291F001A72D7 /* Protobuf.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Protobuf.framework; path = Carthage/Build/iOS/Protobuf.framework; sourceTree = "<group>"; };
 		4984754423D14393005CAF30 /* TryFirebase.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TryFirebase.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4984754723D14393005CAF30 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4984754923D14393005CAF30 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -63,9 +67,11 @@
 				49C49DF423D14D0A00CD16D6 /* FIRAnalyticsConnector.framework in Frameworks */,
 				49C49E0023D14D0A00CD16D6 /* FirebaseInstanceID.framework in Frameworks */,
 				49C49DF823D14D0A00CD16D6 /* FirebaseAnalytics.framework in Frameworks */,
+				4935472F23D5291F001A72D7 /* FirebaseMessaging.framework in Frameworks */,
 				49C49E0423D14D0A00CD16D6 /* GoogleDataTransport.framework in Frameworks */,
 				49C49E0223D14D0A00CD16D6 /* GoogleAppMeasurement.framework in Frameworks */,
 				49C49E0623D14D0A00CD16D6 /* GoogleDataTransportCCTSupport.framework in Frameworks */,
+				4935473123D5291F001A72D7 /* Protobuf.framework in Frameworks */,
 				49C49DFE23D14D0A00CD16D6 /* FirebaseInstallations.framework in Frameworks */,
 				4976ACCA23D14E60008188D3 /* FirebaseCoreDiagnostics.framework in Frameworks */,
 				49C49E0A23D14D0A00CD16D6 /* nanopb.framework in Frameworks */,
@@ -111,6 +117,8 @@
 		4984755B23D14564005CAF30 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				4935472D23D5291F001A72D7 /* FirebaseMessaging.framework */,
+				4935472E23D5291F001A72D7 /* Protobuf.framework */,
 				49C49DF123D14C7600CD16D6 /* FirebaseInstallations.framework */,
 				49C49DE123D14C6200CD16D6 /* PromisesObjC.framework */,
 				49C49DDE23D14C3300CD16D6 /* FIRAnalyticsConnector.framework */,
